@@ -74,6 +74,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Constants\Constants.csproj">
+      <Project>{3e5e17a3-45e9-4f55-8858-c88b90d68346}</Project>
+      <Name>Constants</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PNP.API.Model\PNP.API.Model.csproj">
       <Project>{2828a03a-4561-4edf-b08b-c7855f67a88f}</Project>
       <Name>PNP.API.Model</Name>

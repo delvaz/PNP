@@ -90,12 +90,20 @@
     <Compile Include="Migrations\201612211751026_Initial.Designer.cs">
       <DependentUpon>201612211751026_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612212207412_Groups1.cs" />
+    <Compile Include="Migrations\201612212207412_Groups1.Designer.cs">
+      <DependentUpon>201612212207412_Groups1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PNPContext.cs" />
     <Compile Include="ApplicationUserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Constants\Constants.csproj">
+      <Project>{3e5e17a3-45e9-4f55-8858-c88b90d68346}</Project>
+      <Name>Constants</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PNP.API.Model\PNP.API.Model.csproj">
       <Project>{2828a03a-4561-4edf-b08b-c7855f67a88f}</Project>
       <Name>PNP.API.Model</Name>
@@ -108,6 +116,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201612211751026_Initial.resx">
       <DependentUpon>201612211751026_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612212207412_Groups1.resx">
+      <DependentUpon>201612212207412_Groups1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

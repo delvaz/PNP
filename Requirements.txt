@@ -1,0 +1,9 @@
+//prayer requests
+prayer requests have opendate, targetdate, closedate
+
+//promises
+promises
+
+//groups
+groups must have an owner
+

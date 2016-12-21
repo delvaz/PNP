@@ -8,14 +8,18 @@ namespace PNP.WebAPI.Model.Tests
     public class ModelTests
     {
         [Fact]
+        public void FakeUser_CanBeCreated()
+        {
+            var user = Constants.FakeUser.ActiveAdmin;
+
+            Assert.NotNull(user);
+        }
+
+        [Fact]
         public void Persons_Can_Register()
         {
             throw new NotImplementedException();
-            //person
-            //group of Persons
-            //prayer requests have opendate, targetdate, closedate
-            //promises
-            //roles admin, user, contributor
+
         }
 
         [Fact]
