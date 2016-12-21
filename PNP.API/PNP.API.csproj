@@ -168,7 +168,6 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -291,6 +290,16 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PNP.API.Model\PNP.API.Model.csproj">
+      <Project>{2828a03a-4561-4edf-b08b-c7855f67a88f}</Project>
+      <Name>PNP.API.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PNP.API.Services\PNP.API.Services.csproj">
+      <Project>{ea086df4-c144-48ce-a9b9-32e424e4ba4d}</Project>
+      <Name>PNP.API.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
