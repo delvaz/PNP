@@ -94,6 +94,10 @@
     <Compile Include="Migrations\201612212207412_Groups1.Designer.cs">
       <DependentUpon>201612212207412_Groups1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612272108527_PrayerRequests.cs" />
+    <Compile Include="Migrations\201612272108527_PrayerRequests.Designer.cs">
+      <DependentUpon>201612272108527_PrayerRequests.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PNPContext.cs" />
     <Compile Include="ApplicationUserManager.cs" />
@@ -119,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612212207412_Groups1.resx">
       <DependentUpon>201612212207412_Groups1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612272108527_PrayerRequests.resx">
+      <DependentUpon>201612272108527_PrayerRequests.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

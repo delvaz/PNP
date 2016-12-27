@@ -10,6 +10,10 @@ namespace PNP.API.Model
 {
     public class Group
     {
+        public Group()
+        {
+            Members = new HashSet<Person>();
+        }
         [Required]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -25,5 +29,7 @@ namespace PNP.API.Model
         public Person Moderator { get; set; }
 
         public virtual ICollection<Person> Members { get; set; }
+
+        public virtual ICollection<PrayerRequest> PrayerRequests { get; set; }
     }
 }

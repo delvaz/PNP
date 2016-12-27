@@ -18,6 +18,18 @@ namespace PNP.API.Services
             //Database.SetInitializer<PNPContext>(null);
         }
 
+
+
+        public IQueryable<Person> Persons => Users;
+
+        public virtual DbSet<Group> Groups { get; set; }
+        public virtual DbSet<PrayerRequest> PrayerRequests { get; set; }
+
+        public static PNPContext Create()
+        {
+            return new PNPContext();
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -32,13 +44,16 @@ namespace PNP.API.Services
                     ur.MapRightKey("GroupId");
                 });
 
-        }
+            modelBuilder.Entity<PrayerRequest>()
+                .HasMany(u => u.Groups)
+                .WithMany(r => r.PrayerRequests)
+                .Map(ur =>
+                {
+                    ur.ToTable("PrayerRequestGroups");
+                    ur.MapLeftKey("PrayerRequestId");
+                    ur.MapRightKey("GroupId");
+                });
 
-        public IQueryable<Person> Persons => Users;
-
-        public static PNPContext Create()
-        {
-            return new PNPContext();
         }
     }
 }

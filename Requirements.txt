@@ -6,4 +6,5 @@ promises
 
 //groups
 groups must have an owner
+users can have more than one group
 
